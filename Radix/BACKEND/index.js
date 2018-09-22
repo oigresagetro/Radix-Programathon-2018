@@ -17,8 +17,8 @@ app.use(express.json());
 
 
 //Routes
-app.use('/api/employees',require('./routes/employee.routes'));
+app.use('/api/users',require('./routes/app.routes'));
 
 app.listen(app.get('port'), () => {
-    console.log('Servidor de aaron',app.get('port'));
+    console.log('Server on port: ',app.get('port'));
 });
