@@ -11,6 +11,7 @@ const appController = {};
 
  }
 
+
  appController.register = async(req, res) => {
 
  }
@@ -53,7 +54,5 @@ appController.createChild = async(req, res) => {
  await child.save();
  res.json({status: 'Child created'});
 }
-
-
 
 module.exports = appController;
