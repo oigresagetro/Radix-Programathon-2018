@@ -1,4 +1,4 @@
-const Parent = require('../Models/employee');
+const Parent = require('../Models/parent');
 //const Child = require( '../Models/child' );
 const appController = {};
 
