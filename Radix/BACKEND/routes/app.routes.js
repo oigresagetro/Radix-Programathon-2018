@@ -16,5 +16,4 @@ router.get('/user', appController.getSupervisor);
 router.put('/user/childs', appController.makeChild);
 router.get('/user/childs', appController.getChild);
 
-
 module.exports = router;
