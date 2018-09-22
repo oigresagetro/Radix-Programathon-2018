@@ -4,10 +4,17 @@ const router = express.Router();
 
 const appController = require('../Controllers/app.controllers');
 
-router.post('/', appController.login); //login function
+//Home functions
+router.post('/', appController.login);
+router.put('/', appController.register);
 
-router.get('/', appController.home); // //Home page test button
+//User functions
+router.put('/user', appController.makeSupervisor);
+router.get('/user', appController.getSupervisor);
 
-router.post('/', appController.register); //Así o mas obvio?
+//Child functions, from Users
+router.put('/user/childs', appController.makeChild);
+router.get('/user/childs', appController.getChild);
+
 
 module.exports = router;

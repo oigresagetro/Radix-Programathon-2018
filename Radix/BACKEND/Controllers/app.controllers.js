@@ -7,9 +7,6 @@ const appController = {};
 
  };
 
- appController.home = async(req, res) => {
-
- }
 
  appController.register = async(req, res) => {
 
@@ -17,11 +14,11 @@ const appController = {};
 
 
 //Parent controllers
- appController.getParent = async(req, res) => {
+ appController.getSupervisor = async(req, res) => {
 
  }
 
- appController.makeParent = async(req, res) => {
+ appController.makeSupervisor = async(req, res) => {
 
  }
 
