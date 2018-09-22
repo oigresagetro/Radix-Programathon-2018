@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-const URI = 'mongodb://localhost/mean-crude';
+const URL = 'mongodb://localhost/Users';
 
-mongoose.connect(URI)
+mongoose.connect(URL, {useNewUrlParser:true})
     .then(db => console.log('DB IS CONNECTED'))
     .catch( err => console.error(err));
 
