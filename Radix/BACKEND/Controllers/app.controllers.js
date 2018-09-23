@@ -11,29 +11,22 @@ const appController = {};
 
  }
 
- appController.register = async(req, res) => {
-
- }
-
 
 //Parent controllers
  appController.getParent = async(req, res) => {
-     const { id } = req.params;
-     const parent = await Parent.findById(id);
-     res.json(parent);
- }
+   const parent = await Parent.find();
+   res.json(parent);
+}
 
  appController.createParent = async(req, res) => {
-     const parent = new Parent({
-      email: req.body.email,
-      password: req.body.password,
-      number: req.body.number,
-      name: req.body.name,
-      id: req.body.id,
-      relationship: req.body.relationship
-  });
-  await parent.save();
-  res.json({status: 'Parent created'});
+    const nparent = new Parent(req.body);
+    await nparent.save();
+    res.json({'Status:' : 'Parent Created'});
+ }
+
+ appController.deleteParent = async(req, res) => {
+   await Parent.remove({_id : req.param.id});
+   res.json({'Status: ': 'Deleted'});
  }
 
 //Child controllers
@@ -42,16 +35,7 @@ const appController = {};
  }
 
 appController.createChild = async(req, res) => {
-    const child = new Child({
-     name: req.body.name,
-     id: req.body.id,
-     age: req.body.age,
-     gender: req.body.gender,
-     background: req.body.background,
-     etnhic: req.body.etnhic
- });
- await child.save();
- res.json({status: 'Child created'});
+
 }
 
 

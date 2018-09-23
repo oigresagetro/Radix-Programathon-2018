@@ -17,7 +17,7 @@ app.use(express.json());
 
 
 //Routes
-app.use('/api/users',require('./routes/app.routes'));
+app.use('/',require('./routes/app.routes'));
 
 app.listen(app.get('port'), () => {
     console.log('Server on port: ',app.get('port'));
