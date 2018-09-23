@@ -17,7 +17,7 @@ const childSchema = new Schema({
     treatments  : {type : String, required : true},
     background  : {
         medicine :   [medicine],
-        treatments : [treatments],
+        treatments : [String],
         diseases : [String]
     },
     ethnic  :{type: String,required : true }
