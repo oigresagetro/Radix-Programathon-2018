@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+
+  <body>
+
+    <nav>
+    <div class="nav-wrapper orange darken-4">
+      <a href="home.html" class="brand-logo ">&nbsp APP</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down orange darken-3">
+      </ul>
+    </div>
+  </nav>
+
+    <div class = "container">
+      <br><br><br><br>
+
+      <div class="row">
+        <div class="card-panel grey lighten-5">
+          <div class = "center-align">
+        <span class="card-title">REGISTRO ADULTO</span>
+      </div>
+
+      <div>
+        <form name="myForm" action="home.html">
+          <div class="row">
+            <input
+                id = "first_name"
+                type="text"
+                name="name"
+                placeholder="Nombre del Encargado"
+                pattern="[a-zA-Z]{2,35}"
+                class = "validate"
+                required>
+          </div>
+
+          <div class="row">
+            <input
+                id = "correo"
+                type="text"
+                name="correo"
+                pattern="^([A-z0-9_-]+)([\.]?)([A-z0-9_-]+)@([A-z0-9_-]+)\.([a-z]{2,4})$"
+                placeholder="Correo Electrónico"
+                class = "validate"
+                required>
+          </div>
+
+          <div class="row">
+                <input
+                    id = "psw"
+                    type="password"
+                    name="psw"
+                    pattern="^(?!.*(.)\1)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[< > \- ~ \+ : \? \( \) \{ \} ! @ \$ % \^ \*]).{6,}$"
+                    placeholder="Contraseña"
+                    class = "validate"
+                    required>
+          </div>
+
+
+          <div class="row">
+                <input
+                    id = "phone"
+                    type="tel"
+                    name="phone"
+                    placeholder="Teléfono Celular"
+                    pattern="[0-9]{8}"
+                    class = "validate"
+                    required>
+          </div>
+
+          <div class="row">
+            <input
+                id = "ced"
+                type="text"
+                name="ced"
+                pattern="[0-9]{10}"
+                placeholder="Cédula de Identidad"
+                class = "validate"
+                required>
+          </div>
+
+          <div class= "center-align">
+            <button class="btn waves-effect waves-light btn-large orange darken-4" type="submit" name="fname">GUARDAR
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+        </form>
+
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+
+<script src="js/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</html>

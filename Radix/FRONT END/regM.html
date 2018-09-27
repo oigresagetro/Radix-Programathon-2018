@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+
+
+</head>
+
+  <body>
+
+    <nav>
+    <div class="nav-wrapper orange darken-4">
+      <a href="home.html" class="brand-logo ">&nbsp APP</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down orange darken-3">
+        <li><a class = "" href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav>
+
+    <div class = "container" >
+      <br><br><br><br>
+      <div class="row">
+        <div class="card-panel grey lighten-5">
+          <div class="center-align">
+          <span class="card-title">REGISTRO MENOR</span>
+        </div>
+
+        <form action="home.html">
+          <div class="row">
+            <input
+                id = "first_name"
+                type="text"
+                name="name"
+                placeholder="Nombre del Menor"
+                pattern="[A-z]{2,35}"
+                class = "validate"
+                required>
+          </div>
+
+          <div class="row">
+            <input
+                id = "ced"
+                type="text"
+                name="ced"
+                pattern="[0-9]{10}"
+                placeholder="Cédula de Identidad">
+          </div>
+
+          <div class="row">
+            <input
+                id = "age"
+                type="text"
+                name="age"
+                pattern="[0-9]{1,2}"
+                placeholder="Edad"
+                class = "validate"
+                required>
+          </div>
+
+          <div>
+            <h6> Género </h6>
+            <select class = "browser-default" required>
+               <option value = "1">Femenino</option>
+               <option value = "2">Masculino</option>
+
+            </select>
+          </div>
+
+          <br>
+
+          <div>
+            <h6> Étnia </h6>
+            <select class = "browser-default" required>
+               <option value = "" disabled selected>Seleccionar</option>
+               <option value = "1">Afro Costarricense</option>
+               <option value = "2">Asiático</option>
+               <option value = "3">Blanco</option>
+               <option value = "4">Mestizo</option>
+               <option value = "5">Indígena</option>
+            </select>
+          </div>
+
+          <br><br>
+
+          <div>
+            <h6> Antecedentes </h6>
+              <ul class="collapsible" data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header"><i class="material-icons">accessibility</i>Tratamientos</div>
+                <div class="collapsible-body">
+
+                  <h6>Medicinas Recetadas</h6>
+
+                  <input
+                      type="text"
+                      pattern="{2,30}"
+                      placeholder="Nombre del Medicamento"
+                      class = "validate">
+
+                      <input
+                          type="date"
+                          placeholder="Fecha"
+                          class = "validate">
+
+                          <input
+                              type="number"
+                              max="365"
+                              min="0"
+                              placeholder="Duración"
+                              class = "validate">
+
+                  <br><br>
+                  <h6>Tratamientos de Índole Física</h6>
+                  <input
+                      type="text"
+                      pattern="{500}"
+                      class = "validate">
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">face</i>Enfermedades</div>
+                <div class="collapsible-body">
+                  <input
+                      type="text"
+                      pattern="{500}"
+                      placeholder="Cuadros de enfermedades presentados en los últimos 6 meses."
+                      class = "validate">
+                </div>
+              </li>
+            </ul>
+            <script>
+                              $(document).ready(function(){
+                      $('.collapsible').collapsible();
+                    });
+            </script>
+          </div>
+          <br><br>
+          <div class= "center-align">
+            <button class="btn waves-effect waves-light btn-large orange darken-4" type="submit" name="fname">AGREGAR
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+        </form>
+
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</html>
